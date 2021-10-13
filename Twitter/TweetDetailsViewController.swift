@@ -27,15 +27,6 @@ class TweetDetailsViewController: UIViewController, WKUIDelegate {
 //        let URL = URL(string:"\(url)")
 //        let request = URLRequest(url: URL!)
 //        self.tweetWebView.load(request)
-        var a = (tweet["retweeted_status"] as! [String: Any])
-        var b = ((a["entities"] as Any) as! [String: Any])
-        var c = ((b["media"] as Any) as! NSArray)
-        var d = ((c[0] as Any) as! [String: Any])
-        var url = (d["expanded_url"] as! String)
-        var URL = URL(string: url)
-        print(URL as Any)
-        var request = URLRequest(url: URL!)
-        self.tweetWebView.load(request)
     }
     
 
